@@ -1,0 +1,20 @@
+<odoo>
+	<data>
+		<record id="view_course_tree" model="ir.ui.view">
+			<field name="name">course.tree</field>
+			<field name="model">course</field>
+			<field name="priority">2</field>
+			<field name="arch" type="xml">
+				<tree string="Course" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+					<field name="name" string="course"/>
+					<field name="name" string="Matière"/>
+				</tree>
+			</field>
+		</record>
+		<record id="tree_action_course" model="ir.actions.act_window">
+			<field name="name">Course</field>
+			<field name="res_model">course</field>
+			<field name="view_mode">tree, form</field>
+		</record>
+	</data>
+</odoo>

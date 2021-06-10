@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<record id="view_shedule_tree" model="ir.ui.view">
+			<field name="name">shedule.tree</field>
+			<field name="model">shedule</field>
+			<field name="priority">2</field>
+			<field name="arch" type="xml">
+				<tree string="SheduleTree" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+					<field name="name" string="shedule"/>
+					<field name="date_start" string="Horaire début"/>
+					<field name="date_stop" string="Horaire fin"/>
+					<field name="room" string="Salle de classe"/>
+					<field name="class_id"/>
+					<field name="course_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_shedule_calendar" model="ir.ui.view">
+            <field name="name">shedule.calendar</field>
+            <field name="model">shedule</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <calendar string="Agenda" date_start="date_start" date_stop="date_stop" color="course_id">
+                    <field name="course_id" />
+                    <field name="room" />
+                    <field name="class_id" />
+                </calendar>
+            </field>
+        </record>
+		
+		<record id="tree_action_shedule" model="ir.actions.act_window">
+			<field name="name">Shedule</field>
+			<field name="res_model">shedule</field>
+			<field name = "res_model">shedule</field>
+			<field name="view_mode">tree, form, calendar</field>
+		</record>
+	</data>
+</odoo>

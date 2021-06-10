@@ -1,0 +1,24 @@
+<odoo>
+<record id="view_device_tree" model="iut.it.device">
+	<field name="name">iut.device.tree</field>
+	<field name="model">iut.device</field>
+	<field name="priority">2</field>
+	<field name="arch" type="xml">
+		<tree string="iut_device" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+			<field name="name"/>
+			<field name="date_allocation" string="Date d'allocation"/>
+			<field name="serial_number"/>
+			<field name="date_purchase" string="Date d'achat"/>
+			<field name="date_warranty_end" string='Fin de garantie'/>
+			<field name="employee_id"/>
+			<field name="model_id"/>
+		</tree>
+	</field>
+</record>
+<record id="device_tree_action" model="ir.actions.act_window">
+	<field name="name">Device</field>
+	<field name="res_model">iut.device</field>
+	<field name="view_mode">tree, form</field>
+	<field name="search_view_id" ref="device_carry_filter"/>
+</record>
+</odoo>

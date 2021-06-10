@@ -1,0 +1,21 @@
+<odoo>
+<record id="view_brand_tree" model="iut.it.brand">
+	<field name="name">iut.brand.tree</field>
+	<field name="model">iut.brand</field>
+	<field name="priority">2</field>
+	<field name="arch" type="xml">
+		<tree string="IutBrand" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+			<field name="name" string="iutbrand"/>
+			<field name="warranty_delay_month" string="Délai de Garantie"/>
+			<field name="support_phone" string="Téléphone de Support"/>
+			<field name="_sql_constraints"/>
+		</tree>
+	</field>
+</record>
+<record id="brand_tree_action" model="ir.actions.act_window">
+	<field name="name">Brand</field>
+	<field name="res_model">iut.brand</field>
+	<field name="view_mode">tree, form</field>
+	<field name="search_view_id" ref="brand_carry_filter"/>
+</record>
+</odoo>

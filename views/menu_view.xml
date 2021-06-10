@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+	
+		<menuitem name="Lycee" id="LyceeMenuId" sequence="84"/>
+		<menuitem name="Shedule" id="SheduleMenuId" action="tree_action_shedule" parent="LyceeMenuId" sequence="20"/>
+		<menuitem name="Configuration" id="ConfigurationMenuId" parent="LyceeMenuId" sequence="20"/>
+		
+		<menuitem name="Course" id="CourseMenuId" action="tree_action_course" parent="ConfigurationMenuId" sequence="20"/>
+		<menuitem name="Student" id="StudentMenuId" action="tree_action_student" parent="ConfigurationMenuId" sequence="20"/>
+		<menuitem name="ResPartner" id="ResPartnerMenuId" action="tree_action_ResPartner" parent="ConfigurationMenuId" sequence="20"/>
+		<menuitem name="Class" id="ClassMenuId" action="tree_action_class" parent="ConfigurationMenuId" sequence="20"/>
+	</data>
+</odoo>

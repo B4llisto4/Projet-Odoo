@@ -1,0 +1,24 @@
+<odoo>
+	<data>
+		<record id="view_class_tree" model="ir.ui.view">
+			<field name="name">class.tree</field>
+			<field name="model">class</field>
+			<field name="priority">2</field>
+			<field name="arch" type="xml">
+				<tree string="Class" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+					<field name="name" string="class"/>
+					<field name="level"/>
+					<field name="teacher_ids"/>
+					<field name="student_ids"/>
+					<field name="student_nb" string="Nombre d'élèves"/>
+				</tree>
+			</field>
+		</record>
+						
+		<record id="tree_action_class" model="ir.actions.act_window">
+			<field name="name">Class</field>
+			<field name="res_model">class</field>
+			<field name="view_mode">tree, form</field>
+		</record>
+	</data>
+</odoo>

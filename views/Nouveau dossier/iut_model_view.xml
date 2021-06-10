@@ -1,0 +1,22 @@
+<odoo>
+<record id="view_model_tree" model="iut.it_model">
+	<field name="name">iut.model.tree</field>
+	<field name="model">iut.model</field>
+	<field name="priority">2</field>
+	<field name="arch" type="xml">
+		<tree string="iut_device" decoration-bf="message_redaction==True" decoration-muted="state=='cancel'">
+			<field name="Name"/>
+			<field name="ref"/>
+			<field name="type_ids" string="Types"/>
+			<field name="device_ids"/>
+			<field name="_sql_constraints"/>
+		</tree>
+	</field>
+</record>
+<record id="model_tree_action" model="ir.actions.act_window">
+	<field name="name">Model</field>
+	<field name="res_model">iut.it.model</field>
+	<field name="view_mode">tree, form</field>
+	<field name="search_view_id" ref="model_carry_filter"/>
+</record>
+</odoo>

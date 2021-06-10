@@ -1,0 +1,24 @@
+<kanban class="o_kanban_mobile">
+	<field name="user_id" string="Project Manager"/>
+	<templates>
+	<t t-name="kanban-box">
+	<div t-attf-class="oe_kanban_content oe_kanban_global_click o_kanban_get_form">
+	<div class="row">
+		<div class="col-xs-12">
+			<strong><field name="name" string="Project Name"/></strong>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-8">
+					<field name="partner_id" string="Contact"/>
+					</div>
+					<div class="col-xs-4">
+						<div class="oe_kanban_bottom_right">
+							<img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" width="24" height="24" class="oe_kanban_avatar pull-right"/>
+							</div>
+							</div>
+					</div>
+			</div>
+		</t>
+	</templates>
+</kanban>
